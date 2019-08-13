@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SelectorComponent } from './selector/selector.component'
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: 'selector', component: SelectorComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

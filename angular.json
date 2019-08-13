@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "translation-feedback": {
+    "angular-translation-feedback": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/translation-feedback",
+            "outputPath": "dist/angular-translation-feedback",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -50,6 +51,11 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -58,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "translation-feedback:build"
+            "browserTarget": "angular-translation-feedback:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "translation-feedback:build:production"
+              "browserTarget": "angular-translation-feedback:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "translation-feedback:build"
+            "browserTarget": "angular-translation-feedback:build"
           }
         },
         "test": {
@@ -84,7 +90,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           }
@@ -106,15 +113,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "translation-feedback:serve"
+            "devServerTarget": "angular-translation-feedback:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "translation-feedback:serve:production"
+              "devServerTarget": "angular-translation-feedback:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "translation-feedback"
+  "defaultProject": "angular-translation-feedback"
 }

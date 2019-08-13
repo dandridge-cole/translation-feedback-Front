@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'translation-feedback'`, () => {
+  it(`should have as title 'angular-translation-feedback'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('translation-feedback');
+    expect(app.title).toEqual('angular-translation-feedback');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to translation-feedback!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to angular-translation-feedback!');
   });
 });

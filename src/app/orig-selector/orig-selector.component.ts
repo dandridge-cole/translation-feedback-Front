@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { selectorService } from '../services/selectorService';
 
 @Component({
   selector: 'app-orig-selector',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrigSelectorComponent implements OnInit {
 
-  constructor() { }
+  constructor(selectorService:selectorService) { }
 
   ngOnInit() {
+    this.getOrigTexts();
   }
 
+  getOrigTexts(){
+    selectorService.getOrigTexts();
+  }
 }

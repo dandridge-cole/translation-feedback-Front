@@ -8,4 +8,8 @@ export class selectorService{
     public origTextList: OrigText[];
     constructor(private http: HttpClient){
     }
+
+    getOrigTexts(){
+        
+    }
 }

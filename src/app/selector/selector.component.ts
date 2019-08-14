@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './selector.component.html',
   styleUrls: ['./selector.component.css']
 })
+
 export class SelectorComponent implements OnInit {
 
   constructor() { }

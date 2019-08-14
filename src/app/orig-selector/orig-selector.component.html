@@ -1,9 +1,15 @@
 
 <div ngbDropdown class="d-inline-block">
-    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Select Original Text</button>
     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button *ngFor="let origText of selectorService.getOrigTexts"
+        <button *ngFor="let origText of selectorService.origTextList"
         [class.selected]="origText === selectorService.selectedOrigText"
         (click)="onOrigTextSelect(origText)">{{origText.name}}</button>
+    </div>
+    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Select Translation Root</button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button *ngFor="let transRoot of selectorService.translationRootList"
+        [class.selected]="transRoot === selectorService.selectedTransRoot"
+        (click)="onTransRootSelect(transRootText)">{{transRoot.name}}</button>
     </div>
 </div>

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { SelectorComponent } from './selector/selector.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OrigSelectorComponent } from './orig-selector/orig-selector.component';
+import {HttpClientModule} from "@angular/common/http";
+import { SelectorService } from './services/selectorService';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { OrigSelectorComponent } from './orig-selector/orig-selector.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SelectorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

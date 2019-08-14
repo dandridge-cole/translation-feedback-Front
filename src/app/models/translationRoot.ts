@@ -1,9 +1,9 @@
 import { Language } from './language';
+import { OrigText } from './origText';
 
-export class OrigText {
+export class TranslationRoot {
     id:number;
     name:string;
-    author:string;
-    publication:string;
     language:Language;
+    origText:OrigText;
 }
